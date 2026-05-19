@@ -2,11 +2,14 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SiteNav } from "@/components/SiteNav";
 import { Hero } from "@/components/sections/Hero";
 import { About } from "@/components/sections/About";
+import { Promise as PromiseSection } from "@/components/sections/Promise";
 import { Services } from "@/components/sections/Services";
+import { Conditions } from "@/components/sections/Conditions";
 import { BookingForm } from "@/components/sections/BookingForm";
 import { WhyUs } from "@/components/sections/WhyUs";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { FAQ } from "@/components/sections/FAQ";
+import { GetHelp } from "@/components/sections/GetHelp";
 import { Contact } from "@/components/sections/Contact";
 import { Footer } from "@/components/sections/Footer";
 import { FloatingBook } from "@/components/FloatingBook";
@@ -35,11 +38,14 @@ function Index() {
       <main>
         <Hero />
         <About />
+        <PromiseSection />
         <Services />
+        <Conditions />
         <BookingForm />
         <WhyUs />
         <Testimonials />
         <FAQ />
+        <GetHelp />
         <Contact />
       </main>
       <Footer />
