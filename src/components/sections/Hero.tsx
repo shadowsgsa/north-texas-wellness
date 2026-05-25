@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Phone, Sparkles } from "lucide-react";
 import heroImg from "@/assets/hero.jpg";
+import { openBooking } from "@/lib/booking";
 
 const pillars = [
   { word: "Peace", desc: "A calm, judgment‑free space to be heard." },
@@ -37,14 +38,12 @@ export function Hero() {
             peace, hope, and clarity, every step of the way.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <Button asChild size="lg" className="rounded-full px-7 shadow-soft">
-              <a href="#book">
-                Book Appointment <ArrowRight size={18} className="ml-1" />
-              </a>
+            <Button onClick={openBooking} size="lg" className="rounded-full px-7 shadow-soft bg-accent text-accent-foreground hover:bg-accent/90">
+              Book Appointment <ArrowRight size={18} className="ml-1" />
             </Button>
             <Button asChild size="lg" variant="outline" className="rounded-full px-7 border-primary/25 bg-card/70 backdrop-blur">
-              <a href="#contact">
-                <Phone size={16} className="mr-1" /> Contact Us
+              <a href="tel:+18179843514">
+                <Phone size={16} className="mr-1" /> (817) 984-3514
               </a>
             </Button>
           </div>

@@ -9,6 +9,11 @@ import {
 } from "@tanstack/react-router";
 
 import appCss from "../styles.css?url";
+import { TopBar } from "@/components/TopBar";
+import { SiteNav } from "@/components/SiteNav";
+import { Footer } from "@/components/sections/Footer";
+import { FloatingBook } from "@/components/FloatingBook";
+import { BookingModal } from "@/components/BookingModal";
 
 function NotFoundComponent() {
   return (
@@ -113,7 +118,14 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <Outlet />
+      <div className="min-h-dvh bg-background">
+        <TopBar />
+        <SiteNav />
+        <Outlet />
+        <Footer />
+        <FloatingBook />
+        <BookingModal />
+      </div>
     </QueryClientProvider>
   );
 }

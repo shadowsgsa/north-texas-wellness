@@ -10,33 +10,78 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ServicesSubstanceAbuseProgramRouteImport } from './routes/services.substance-abuse-program'
+import { Route as ServicesResearchProgramRouteImport } from './routes/services.research-program'
+import { Route as ServicesPsychiatricConsultationRouteImport } from './routes/services.psychiatric-consultation'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ServicesSubstanceAbuseProgramRoute =
+  ServicesSubstanceAbuseProgramRouteImport.update({
+    id: '/services/substance-abuse-program',
+    path: '/services/substance-abuse-program',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ServicesResearchProgramRoute = ServicesResearchProgramRouteImport.update({
+  id: '/services/research-program',
+  path: '/services/research-program',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesPsychiatricConsultationRoute =
+  ServicesPsychiatricConsultationRouteImport.update({
+    id: '/services/psychiatric-consultation',
+    path: '/services/psychiatric-consultation',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/services/psychiatric-consultation': typeof ServicesPsychiatricConsultationRoute
+  '/services/research-program': typeof ServicesResearchProgramRoute
+  '/services/substance-abuse-program': typeof ServicesSubstanceAbuseProgramRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/services/psychiatric-consultation': typeof ServicesPsychiatricConsultationRoute
+  '/services/research-program': typeof ServicesResearchProgramRoute
+  '/services/substance-abuse-program': typeof ServicesSubstanceAbuseProgramRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/services/psychiatric-consultation': typeof ServicesPsychiatricConsultationRoute
+  '/services/research-program': typeof ServicesResearchProgramRoute
+  '/services/substance-abuse-program': typeof ServicesSubstanceAbuseProgramRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/services/psychiatric-consultation'
+    | '/services/research-program'
+    | '/services/substance-abuse-program'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/services/psychiatric-consultation'
+    | '/services/research-program'
+    | '/services/substance-abuse-program'
+  id:
+    | '__root__'
+    | '/'
+    | '/services/psychiatric-consultation'
+    | '/services/research-program'
+    | '/services/substance-abuse-program'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ServicesPsychiatricConsultationRoute: typeof ServicesPsychiatricConsultationRoute
+  ServicesResearchProgramRoute: typeof ServicesResearchProgramRoute
+  ServicesSubstanceAbuseProgramRoute: typeof ServicesSubstanceAbuseProgramRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +93,35 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/services/substance-abuse-program': {
+      id: '/services/substance-abuse-program'
+      path: '/services/substance-abuse-program'
+      fullPath: '/services/substance-abuse-program'
+      preLoaderRoute: typeof ServicesSubstanceAbuseProgramRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/research-program': {
+      id: '/services/research-program'
+      path: '/services/research-program'
+      fullPath: '/services/research-program'
+      preLoaderRoute: typeof ServicesResearchProgramRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/psychiatric-consultation': {
+      id: '/services/psychiatric-consultation'
+      path: '/services/psychiatric-consultation'
+      fullPath: '/services/psychiatric-consultation'
+      preLoaderRoute: typeof ServicesPsychiatricConsultationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ServicesPsychiatricConsultationRoute: ServicesPsychiatricConsultationRoute,
+  ServicesResearchProgramRoute: ServicesResearchProgramRoute,
+  ServicesSubstanceAbuseProgramRoute: ServicesSubstanceAbuseProgramRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

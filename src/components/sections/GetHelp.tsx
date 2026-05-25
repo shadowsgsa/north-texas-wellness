@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Phone, Clock } from "lucide-react";
+import { openBooking } from "@/lib/booking";
 
 export function GetHelp() {
   return (
@@ -20,10 +21,8 @@ export function GetHelp() {
                 a kind, qualified clinician will be in touch within one business day.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
-                <Button asChild size="lg" className="rounded-full bg-accent text-accent-foreground hover:bg-accent/90">
-                  <a href="#book">
-                    Book Appointment <ArrowRight size={18} className="ml-1" />
-                  </a>
+                <Button onClick={openBooking} size="lg" className="rounded-full bg-accent text-accent-foreground hover:bg-accent/90">
+                  Book Appointment <ArrowRight size={18} className="ml-1" />
                 </Button>
                 <Button asChild size="lg" variant="outline" className="rounded-full border-primary-foreground/40 bg-transparent text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground">
                   <a href="tel:+18179843514">
