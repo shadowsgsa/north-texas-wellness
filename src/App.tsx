@@ -6,6 +6,7 @@ import { Footer } from "@/components/sections/Footer";
 import { FloatingBook } from "@/components/FloatingBook";
 import { BookingModal } from "@/components/BookingModal";
 import Index from "@/pages/Index";
+import About from "@/pages/About";
 import PsychiatricConsultation from "@/pages/PsychiatricConsultation";
 import ResearchProgram from "@/pages/ResearchProgram";
 import SubstanceAbuseProgram from "@/pages/SubstanceAbuseProgram";
@@ -55,6 +56,7 @@ export default function App() {
       <SiteNav />
       <Routes>
         <Route path="/" element={<Index />} />
+        <Route path="/about" element={<About />} />
         <Route path="/services/psychiatric-consultation" element={<PsychiatricConsultation />} />
         <Route path="/services/research-program" element={<ResearchProgram />} />
         <Route path="/services/substance-abuse-program" element={<SubstanceAbuseProgram />} />

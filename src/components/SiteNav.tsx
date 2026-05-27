@@ -41,7 +41,7 @@ export function SiteNav() {
         </Link>
         <ul className="hidden items-center gap-7 lg:flex">
           <li><Link to="/" className="text-sm font-medium text-foreground/75 hover:text-primary">Home</Link></li>
-          <li><a href="/#about" className="text-sm font-medium text-foreground/75 hover:text-primary">About</a></li>
+          <li><Link to="/about" className="text-sm font-medium text-foreground/75 hover:text-primary">About</Link></li>
           <li
             className="relative"
             onMouseEnter={() => setSvcOpen(true)}
@@ -87,7 +87,7 @@ export function SiteNav() {
         <div className="lg:hidden border-t border-border bg-background">
           <ul className="flex flex-col gap-1 p-4">
             <li><Link to="/" onClick={() => setOpen(false)} className="block rounded-md px-3 py-2 text-sm font-medium hover:bg-muted">Home</Link></li>
-            <li><a href="/#about" onClick={() => setOpen(false)} className="block rounded-md px-3 py-2 text-sm font-medium hover:bg-muted">About</a></li>
+            <li><Link to="/about" onClick={() => setOpen(false)} className="block rounded-md px-3 py-2 text-sm font-medium hover:bg-muted">About</Link></li>
             <li className="px-3 pt-2 pb-1 text-xs font-semibold uppercase tracking-wider text-muted-foreground">Services</li>
             {services.map((s) => (
               <li key={s.to}>
