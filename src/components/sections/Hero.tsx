@@ -60,7 +60,7 @@ export function Hero() {
             </dl>
           </div>
 
-          <div className="relative hidden lg:block animate-fade-up">
+          <div className="relative animate-fade-up mt-4 lg:mt-0">
             <div className="absolute -inset-6 rounded-[2.25rem] bg-sage/25 blur-3xl" aria-hidden />
             <div className="relative overflow-hidden rounded-[1.75rem] bg-card shadow-card ring-1 ring-border/60 aspect-square">
               <img

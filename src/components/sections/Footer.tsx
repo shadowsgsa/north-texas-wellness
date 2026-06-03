@@ -9,8 +9,8 @@ export function Footer() {
     <footer className="bg-primary text-primary-foreground">
       <div className="mx-auto grid max-w-7xl gap-10 px-6 py-16 md:grid-cols-4">
         <div className="md:col-span-2">
-          <div className="inline-flex rounded-2xl bg-primary-foreground/95 p-3 shadow-soft">
-            <img src={logo} alt="Behavioral Health North Texas" className="h-20 w-auto md:h-24" />
+          <div className="inline-flex">
+            <img src={logo} alt="Behavioral Health North Texas" className="h-24 w-auto md:h-28 brightness-0 invert" />
           </div>
           <p className="mt-5 max-w-sm text-sm text-primary-foreground/80 leading-relaxed">
             Compassionate psychiatric care serving Garland and the greater North Texas
