@@ -10,7 +10,7 @@ const points = [
 
 export function About() {
   return (
-    <section id="about" className="py-16 md:py-24 bg-background">
+    <section id="about" className="py-12 md:py-20 bg-background">
       <div className="mx-auto grid max-w-7xl items-center gap-10 md:gap-16 px-6 lg:grid-cols-2">
         <div className="order-2 lg:order-1 relative">
           <div className="absolute -inset-4 rounded-[2rem] bg-sage/15 blur-2xl" aria-hidden />

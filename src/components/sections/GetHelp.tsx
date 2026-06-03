@@ -4,7 +4,7 @@ import { openBooking } from "@/lib/booking";
 
 export function GetHelp() {
   return (
-    <section className="py-20 bg-background">
+    <section className="py-14 md:py-20 bg-background">
       <div className="mx-auto max-w-6xl px-6">
         <div className="relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-primary via-primary to-primary/85 p-10 text-primary-foreground shadow-card md:p-16">
           <div className="absolute -right-20 -top-20 h-72 w-72 rounded-full bg-peach/30 blur-3xl" aria-hidden />

@@ -13,7 +13,7 @@ const conditions = [
 
 export function Conditions() {
   return (
-    <section id="conditions" className="py-24 bg-gradient-hero">
+    <section id="conditions" className="py-14 md:py-20 bg-gradient-hero">
       <div className="mx-auto max-w-6xl px-6">
         <div className="grid items-center gap-12 lg:grid-cols-[1fr_1.2fr]">
           <div>

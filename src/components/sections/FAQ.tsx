@@ -10,7 +10,7 @@ const faqs = [
 
 export function FAQ() {
   return (
-    <section id="faq" className="py-24 bg-background">
+    <section id="faq" className="py-14 md:py-20 bg-background">
       <div className="mx-auto max-w-3xl px-6">
         <div className="text-center">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent">Frequently asked</p>

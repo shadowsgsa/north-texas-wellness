@@ -61,7 +61,7 @@ export default function About() {
       <section className="relative overflow-hidden bg-gradient-hero">
         <div className="absolute -right-32 top-10 h-80 w-80 rounded-full bg-sage/20 blur-3xl" aria-hidden />
         <div className="absolute -left-20 bottom-0 h-72 w-72 rounded-full bg-peach/20 blur-3xl" aria-hidden />
-        <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-6 py-20 lg:grid-cols-[1.1fr_1fr] lg:py-28">
+        <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-6 py-14 lg:grid-cols-[1.1fr_1fr] lg:py-20">
           <div>
             <Link
               to="/"
@@ -136,7 +136,7 @@ export default function About() {
       </section>
 
       {/* Biography */}
-      <section className="py-20">
+      <section className="py-12 md:py-16">
         <div className="mx-auto grid max-w-6xl gap-12 px-6 lg:grid-cols-[1fr_1.15fr] lg:items-start">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent">
@@ -198,7 +198,7 @@ export default function About() {
       </section>
 
       {/* Expertise */}
-      <section className="bg-cream/50 py-20">
+      <section className="bg-cream/50 py-12 md:py-16">
         <div className="mx-auto max-w-6xl px-6">
           <div className="mx-auto max-w-2xl text-center">
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent">
@@ -226,7 +226,7 @@ export default function About() {
       </section>
 
       {/* Values */}
-      <section className="py-20">
+      <section className="py-12 md:py-16">
         <div className="mx-auto max-w-6xl px-6">
           <div className="grid gap-12 lg:grid-cols-[1fr_1.4fr] lg:items-start">
             <div>

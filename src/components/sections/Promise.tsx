@@ -20,7 +20,7 @@ const pillars = [
 
 export function Promise() {
   return (
-    <section id="promise" className="relative py-24 bg-background">
+    <section id="promise" className="relative py-14 md:py-20 bg-background">
       <div className="mx-auto max-w-7xl px-6">
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent">Our Promise to You</p>

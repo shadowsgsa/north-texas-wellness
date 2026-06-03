@@ -8,7 +8,7 @@ import { useState } from "react";
 export function Contact() {
   const [sent, setSent] = useState(false);
   return (
-    <section id="contact" className="py-24 bg-cream/50">
+    <section id="contact" className="py-14 md:py-20 bg-cream/50">
       <div className="mx-auto max-w-7xl px-6">
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent">Contact</p>
