@@ -25,7 +25,7 @@ export function Hero() {
         <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent" />
       </div>
 
-      <div className="mx-auto max-w-7xl px-6 py-24 lg:py-32">
+      <div className="mx-auto max-w-7xl px-6 py-12 md:py-20 lg:py-28">
         <div className="grid items-center gap-12 lg:grid-cols-[1.15fr_1fr]">
           <div className="max-w-2xl animate-fade-up">
             <span className="inline-flex items-center gap-2 rounded-full border border-sage/40 bg-card/70 px-4 py-1.5 text-xs font-medium text-sage-foreground backdrop-blur">
