@@ -10,7 +10,7 @@ export function Footer() {
       <div className="mx-auto grid max-w-7xl gap-10 px-6 py-16 md:grid-cols-4">
         <div className="md:col-span-2">
           <div className="inline-flex">
-            <img src={logo} alt="Behavioral Health North Texas" className="h-36 md:h-44 lg:h-48 w-auto  brightness-0 invert" />
+            <img src={logo} alt="Behavioral Health North Texas" className="h-36 md:h-44 lg:h-48 w-auto mb-0  brightness-0 invert" />
           </div>
           <p className="mt-5 max-w-sm text-sm text-primary-foreground/80 leading-relaxed">
             Compassionate psychiatric care serving Garland and the greater North Texas
