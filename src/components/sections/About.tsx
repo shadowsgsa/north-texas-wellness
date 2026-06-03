@@ -12,13 +12,13 @@ export function About() {
   return (
     <section id="about" className="py-16 md:py-24 bg-background">
       <div className="mx-auto grid max-w-7xl items-center gap-10 md:gap-16 px-6 lg:grid-cols-2">
-        <div className="relative">
+        <div className="order-2 lg:order-1 relative">
           <div className="absolute -inset-4 rounded-[2rem] bg-sage/15 blur-2xl" aria-hidden />
           <div className="relative overflow-hidden rounded-[1.75rem] shadow-card bg-cream">
             <img src={aboutImg} alt="Dr. Bushra Aziz, MD" width={1200} height={1400} loading="lazy" className="w-full object-cover aspect-[4/5]" />
           </div>
         </div>
-        <div>
+        <div className="order-1 lg:order-2">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent">About the Clinic</p>
           <h2 className="mt-3 font-display text-4xl font-semibold text-primary md:text-5xl text-balance">
             Modern psychiatry led by Dr. Bushra Aziz, MD
