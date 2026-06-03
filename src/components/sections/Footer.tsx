@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo2.png";
 import { Button } from "@/components/ui/button";
 import { Facebook, Instagram, Linkedin, CalendarHeart } from "lucide-react";
 import { openBooking } from "@/lib/booking";
