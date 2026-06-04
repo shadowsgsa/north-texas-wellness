@@ -57,17 +57,17 @@ export function Contact() {
                 </li>
                 <li className="flex gap-3">
                   <MessageCircle className="text-sage shrink-0" size={18} />
-                  <a href="https://wa.me/14696564470" target="_blank" rel="noreferrer" className="hover:text-primary">WhatsApp: 469‑656‑4470</a>
+                  <a href="https://wa.me/18179843514" target="_blank" rel="noreferrer" className="hover:text-primary">WhatsApp: (817) 984‑3514</a>
                 </li>
                 <li className="flex gap-3">
                   <Mail className="text-sage shrink-0" size={18} />
-                  <a href="mailto:sbnclinical@gmail.com" className="hover:text-primary">sbnclinical@gmail.com</a>
+                  <a href="mailto:bushraaziz@behavioralhealthnta.com" className="hover:text-primary">bushraaziz@behavioralhealthnta.com</a>
                 </li>
               </ul>
 
               <div className="mt-6 flex flex-wrap gap-2">
                 <Button asChild variant="outline" className="rounded-full"><a href="tel:+18179843514"><Phone size={16} className="mr-1"/>Call</a></Button>
-                <Button asChild className="rounded-full"><a href="https://wa.me/14696564470" target="_blank" rel="noreferrer"><MessageCircle size={16} className="mr-1"/>WhatsApp</a></Button>
+                <Button asChild className="rounded-full"><a href="https://wa.me/18179843514" target="_blank" rel="noreferrer"><MessageCircle size={16} className="mr-1"/>WhatsApp</a></Button>
               </div>
             </div>
 

@@ -9,8 +9,8 @@ export function TopBar() {
           <a href="tel:+18179843514" className="inline-flex items-center gap-1.5 hover:text-peach transition-colors">
             <Phone size={14} /> <span className="font-medium">(817) 984-3514</span>
           </a>
-          <a href="mailto:sbnclinical@gmail.com" className="hidden sm:inline-flex items-center gap-1.5 hover:text-peach transition-colors">
-            <Mail size={14} /> sbnclinical@gmail.com
+          <a href="mailto:bushraaziz@behavioralhealthnta.com" className="hidden sm:inline-flex items-center gap-1.5 hover:text-peach transition-colors">
+            <Mail size={14} /> bushraaziz@behavioralhealthnta.com
           </a>
         </div>
         <button
