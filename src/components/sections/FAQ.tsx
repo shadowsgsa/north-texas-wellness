@@ -3,7 +3,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 const faqs = [
   { q: "Do you offer virtual appointments?", a: "Yes. We provide secure telehealth visits for established and new patients across Texas, alongside in-person care at our Garland office." },
   { q: "What insurance do you accept?", a: "We work with most major commercial insurance plans. Please contact our office and we will verify your specific coverage and benefits prior to your visit." },
-  { q: "How do I book an appointment?", a: "Use the Schedule Your Appointment section above, call (817) 984‑3514, or message us on WhatsApp at 469‑656‑4470. We typically confirm within one business day." },
+  { q: "How do I book an appointment?", a: "Use the Schedule Your Appointment section above, call (817) 984‑3514, or message us on WhatsApp at (817) 984‑3514. We typically confirm within one business day." },
   { q: "What therapy services do you provide?", a: "Individual, couples and group therapy in addition to psychiatric assessment, medication management, intervention and consultation services." },
   { q: "Is counseling confidential?", a: "Absolutely. Your privacy is protected under HIPAA. Information shared in sessions remains confidential within the limits required by law." },
 ];

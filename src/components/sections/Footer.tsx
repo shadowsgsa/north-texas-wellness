@@ -42,7 +42,7 @@ export function Footer() {
           <ul className="mt-3 space-y-2 text-sm text-primary-foreground/80">
             <li>5506 Broadway Blvd<br/>Garland, TX 75043</li>
             <li><a href="tel:+18179843514" className="hover:text-peach transition">(817) 984-3514</a></li>
-            <li><a href="mailto:sbnclinical@gmail.com" className="hover:text-peach transition">sbnclinical@gmail.com</a></li>
+            <li><a href="mailto:bushraaziz@behavioralhealthnta.com" className="hover:text-peach transition">bushraaziz@behavioralhealthnta.com</a></li>
           </ul>
         </div>
       </div>
