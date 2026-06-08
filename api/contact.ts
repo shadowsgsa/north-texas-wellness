@@ -1,9 +1,12 @@
 import nodemailer from "nodemailer";
 
 export default async function handler(req: any, res: any) {
+  console.log("API HIT");
   if (req.method !== "POST") {
     return res.status(405).json({ message: "Method not allowed" });
   }
+
+  console.log("BODY:", req.body);
 
   const { name, email, message } = req.body;
 
@@ -11,7 +14,10 @@ export default async function handler(req: any, res: any) {
     return res.status(400).json({ message: "Missing fields" });
   }
 
+
+
   try {
+    console.log("Creating transporter");
       const transporter = nodemailer.createTransport({
         host: "smtp.titan.email",
         port: 587,
@@ -24,7 +30,7 @@ export default async function handler(req: any, res: any) {
     });
 
     await transporter.verify();
-console.log("SMTP verified");
+  console.log("SMTP verified");
 
     await transporter.sendMail({
       from: "Website Contact Form" ,
