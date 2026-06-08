@@ -19,7 +19,7 @@ export default async function handler(req: any, res: any) {
         requireTLS: true,
         auth: {
             user: "john@patchmakershub.com",
-            pass: "Qwerty@123", 
+            pass: "qwerty@123", 
         },
     });
 
