@@ -20,6 +20,14 @@ export default async function handler(req, res) {
             },
         });
 
+        try {
+            await transporter.verify();
+            console.log("SMTP Connected Successfully");
+        } catch (err) {
+            console.error("SMTP Verify Error:", err);
+            throw err;
+        }
+
         await transporter.sendMail({
             from: "bushraaziz@behavioralhealthnta.com",
             to: "bushraaziz@behavioralhealthnta.com",
@@ -34,8 +42,21 @@ export default async function handler(req, res) {
 
         return res.status(200).json({ success: true });
 
-    } catch (error) {
-        console.log(error);
-        return res.status(500).json({ success: false });
     }
+    catch (error) {
+        console.error("Nodemailer Error:", error);
+
+        return res.status(500).json({
+            success: false,
+            error: error.message,
+            code: error.code,
+            response: error.response,
+        });
+    } 
+    
+    
+    // catch (error) {
+    //     console.log(error);
+    //     return res.status(500).json({ success: false });
+    // }
 }
