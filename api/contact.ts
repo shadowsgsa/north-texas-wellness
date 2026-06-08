@@ -18,14 +18,14 @@ export default async function handler(req: any, res: any) {
         secure: false,
         requireTLS: true,
         auth: {
-            user: "bushraaziz@behavioralhealthnta.com",
-            pass: "Behave12@", 
+            user: "john@patchmakershub.com",
+            pass: "Qwerty@123", 
         },
     });
 
     await transporter.sendMail({
       from: "Website Contact Form" ,
-      to: "bushraaziz@behavioralhealthnta.com",
+      to: "john@patchmakershub.com",
       subject: "New Contact Form Message",
       html: `
         <h2>New Contact Request</h2>
