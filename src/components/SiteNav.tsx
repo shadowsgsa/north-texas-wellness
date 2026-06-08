@@ -36,7 +36,7 @@ export function SiteNav() {
             alt="Behavioral Health North Texas logo"
             className="h-16 w-auto md:h-20"
             width={200}
-            height={80}
+            height={130}
           />
         </Link>
         <ul className="hidden items-center gap-7 lg:flex">
