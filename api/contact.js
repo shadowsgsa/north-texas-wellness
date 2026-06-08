@@ -20,13 +20,6 @@ export default async function handler(req, res) {
             },
         });
 
-        try {
-            await transporter.verify();
-            console.log("SMTP Connected Successfully");
-        } catch (err) {
-            console.error("SMTP Verify Error:", err);
-            throw err;
-        }
 
         await transporter.sendMail({
             from: "bushraaziz@behavioralhealthnta.com",
