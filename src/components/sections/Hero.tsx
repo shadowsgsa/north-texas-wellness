@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Phone, Sparkles } from "lucide-react";
 import heroImg from "@/assets/hero.jpg";
-import heroSide from "@/assets/hero-side.jpg";
+import heroSide from "@/assets/h-img.jpeg";
 import { openBooking } from "@/lib/booking";
 
 const pillars = [
