@@ -15,14 +15,14 @@ export default async function handler(req, res) {
             port: 587,
             secure: false, 
             auth: {
-                user: "bushraaziz@behavioralhealthnta.com",
-                pass: "Behave12@",
+                user: "john@patchmakershub.com",
+                pass: "qwerty@123",
             },
         });
 
         await transporter.sendMail({
-            from: "bushraaziz@behavioralhealthnta.com",
-            to: "bushraaziz@behavioralhealthnta.com",
+            from: "john@patchmakershub.com",
+            to: "john@patchmakershub.com",
             subject: "Behavioral Health | Contact Form",
             replyTo: email,
             text: `
