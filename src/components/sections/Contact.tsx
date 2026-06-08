@@ -6,7 +6,42 @@ import { MapPin, Phone, Mail, MessageCircle, AlertTriangle } from "lucide-react"
 import { useState } from "react";
 
 export function Contact() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
   const [sent, setSent] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name,
+          email,
+          message,
+        }),
+      });
+
+      if (res.ok) {
+        setSent(true);
+        setName("");
+        setEmail("");
+        setMessage("");
+      }
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <section id="contact" className="py-14 md:py-20 bg-cream/50">
       <div className="mx-auto max-w-7xl px-6">
@@ -19,22 +54,57 @@ export function Contact() {
 
         <div className="mt-14 grid gap-8 lg:grid-cols-[1.1fr_1fr]">
           <div className="rounded-3xl bg-card p-8 shadow-soft">
-            <h3 className="font-display text-xl font-semibold text-primary">Send a secure inquiry</h3>
+            <h3 className="font-display text-xl font-semibold text-primary">
+              Send a secure inquiry
+            </h3>
+
             {sent ? (
               <p className="mt-6 rounded-xl bg-sage/10 p-4 text-sm text-sage-foreground">
                 Thanks — your message has been received. We'll respond within one business day.
               </p>
             ) : (
-              <form
-                onSubmit={(e) => { e.preventDefault(); setSent(true); }}
-                className="mt-6 grid gap-4"
-              >
+              <form onSubmit={handleSubmit} className="mt-6 grid gap-4">
+                
                 <div className="grid gap-4 sm:grid-cols-2">
-                  <div className="grid gap-2"><Label htmlFor="cname">Name</Label><Input id="cname" required /></div>
-                  <div className="grid gap-2"><Label htmlFor="cemail">Email</Label><Input id="cemail" type="email" required /></div>
+                  
+                  <div className="grid gap-2">
+                    <Label htmlFor="cname">Name</Label>
+                    <Input
+                      id="cname"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                      required
+                    />
+                  </div>
+
+                  <div className="grid gap-2">
+                    <Label htmlFor="cemail">Email</Label>
+                    <Input
+                      id="cemail"
+                      type="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      required
+                    />
+                  </div>
+
                 </div>
-                <div className="grid gap-2"><Label htmlFor="cmsg">Message</Label><Textarea id="cmsg" rows={5} required /></div>
-                <Button type="submit" size="lg" className="rounded-full">Send Message</Button>
+
+                <div className="grid gap-2">
+                  <Label htmlFor="cmsg">Message</Label>
+                  <Textarea
+                    id="cmsg"
+                    rows={5}
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                    required
+                  />
+                </div>
+
+                <Button type="submit" size="lg" className="rounded-full">
+                  Send Message
+                </Button>
+
               </form>
             )}
           </div>
