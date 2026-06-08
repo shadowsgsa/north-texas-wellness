@@ -12,14 +12,15 @@ export default async function handler(req: any, res: any) {
   }
 
   try {
-    const transporter = nodemailer.createTransport({
-      host: "smtp.titan.email",
-      port: 587,
-      secure: false,
-      auth: {
-        user: "bushraaziz@behavioralhealthnta.com",
-        pass: "Behave12@",
-      },
+      const transporter = nodemailer.createTransport({
+        host: "smtp.titan.email",
+        port: 587,
+        secure: false,
+        requireTLS: true,
+        auth: {
+            user: "bushraaziz@behavioralhealthnta.com",
+            pass: "Behave12@", 
+        },
     });
 
     await transporter.sendMail({
