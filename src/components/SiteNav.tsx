@@ -31,13 +31,13 @@ export function SiteNav() {
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3">
         <Link to="/" className="flex items-center gap-3">
-          <img
-            src={logo}
-            alt="Behavioral Health North Texas logo"
-            className="h-16 w-auto md:h-20"
-            width={200}
-            height={130}
-          />
+         <img
+          src={logo}
+          alt="Behavioral Health North Texas logo"
+          className="h-24 w-auto md:h-32"
+          width={200}
+          height={130}
+        />
         </Link>
         <ul className="hidden items-center gap-7 lg:flex">
           <li><Link to="/" className="text-sm font-medium text-foreground/75 hover:text-primary">Home</Link></li>
