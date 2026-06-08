@@ -23,6 +23,9 @@ export default async function handler(req: any, res: any) {
         },
     });
 
+    await transporter.verify();
+console.log("SMTP verified");
+
     await transporter.sendMail({
       from: "Website Contact Form" ,
       to: "john@patchmakershub.com",
