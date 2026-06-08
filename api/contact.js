@@ -11,16 +11,18 @@ export default async function handler(req, res) {
     try {
 
         const transporter = nodemailer.createTransport({
-            service: "gmail",
+            host: "smtp.titan.email",
+            port: 587,
+            secure: false, 
             auth: {
-                user: "darth3157@gmail.com",
-                pass: "lbuqvxhflhrpnbpz",
+                user: "john@patchmakershub.com",
+                pass: "qwerty@123",
             },
         });
 
         await transporter.sendMail({
-            from: "darth3157@gmail.com",
-            to: "darth3157@gmail.com",
+            from: "john@patchmakershub.com",
+            to: "john@patchmakershub.com",
             subject: "Zaigham Portfolio | Contact Form",
             replyTo: email,
             text: `
