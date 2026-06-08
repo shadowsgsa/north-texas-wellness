@@ -12,8 +12,8 @@ export default async function handler(req, res) {
 
         const transporter = nodemailer.createTransport({
             host: "smtp.titan.email",
-            port: 587,
-            secure: false, 
+            port: 465,
+            secure: true, 
             auth: {
                 user: "bushraaziz@behavioralhealthnta.com",
                 pass: "Behave12@",
